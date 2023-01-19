@@ -11,6 +11,7 @@ export class ModalDialog extends WebComponent {
         super();
         this._createShadow();
         this._container = this.shadowRoot.getElementById('modal-container');
+        this._dialog = this.shadowRoot.getElementById('modal-dialog');
     }
 
     toggle() {
@@ -25,7 +26,14 @@ export class ModalDialog extends WebComponent {
         this._container.classList.remove('show');
     }
 
-    connectedCallback() {}
+    connectedCallback() {
+        this._container.addEventListener('click', e => {
+            this.hide();
+        });
+        this._dialog.addEventListener('click', e => {
+            e.stopPropagation();
+        });
+    }
 }
 
 const templateUrl = new URL('modaldialog.html', import.meta.url).href;

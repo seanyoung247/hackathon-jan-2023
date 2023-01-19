@@ -5,9 +5,29 @@
     }
     #modal-container.show {
         display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        top:0; left: 0; right: 0; bottom: 0;
+        background: #000000BB;
+    }
+    .modal-section {
+        border: 1px solid black;
     }
 </style>
 
 <div id="modal-container">
-    hello!
+    <div id="modal-dialog" part="modal-dialog">
+        <div part="modal-header" class="modal-section">
+            <slot name="modal-header"></slot>
+        </div>
+        <div part="modal-content" class="modal-section">
+            <slot name="modal-content"></slot>
+        </div>
+        <div part="modal-footer" class="modal-section">
+            <slot name="modal-footer"></slot>
+        </div>
+    </div>
 </div>
