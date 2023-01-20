@@ -68,4 +68,24 @@ body {
 /* Income Section */
 #income-section {
     margin-top: 200px;
+    width: 100%;
+}
+
+#income-container-box {
+    margin: 0 auto;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #072fc2;
+    width: 90%;
+    height: 150px;
+}
+
+#income-container-circle {
+    margin: 0 auto;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #3b3b3d;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px
 }
