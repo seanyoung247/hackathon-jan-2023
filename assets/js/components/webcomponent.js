@@ -61,7 +61,7 @@ export class WebComponent extends HTMLElement {
                 const propName = `_${key}`;
                 // Create a property and set it to the default value
                 this[propName] = value.default;
-    
+
                 // If getters and setters don't already exist, add them
                 if (!(key in this)) {
                     this.constructor._createDefaultAccessor(this, key, propName);
@@ -104,13 +104,12 @@ export class WebComponent extends HTMLElement {
     connectedCallback() {
         this.onStart();
     }
-
     attributeChangedCallback(property, oldValue, newValue) {
         if (oldValue === newValue) return;
         // Attributes are always strings, so decode it to the correct datatype
-        const val = this.attributes[property].type === Boolean ?
-            newValue.toLowerCase() != 'false' :
-            this.attributes[property].type(newValue);
+        const val = this.attributes[property].type != Boolean ? 
+            this.attributes[property].type(newValue) :
+            this.hasAttribute('show');
 
         if (this[property] != val) this[property] = val;
     }
