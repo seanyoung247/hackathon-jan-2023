@@ -1,0 +1,29 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    padding: 2px;
+    margin: 2px;
+}
+
+/* applied to all modal-dialog parts */
+modal-dialog::part(modal-dialog) {
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+modal-dialog::part(modal-header)
+
+/* Only applied to the test-modal modal-dialog parts */
+#test-modal::part(modal-dialog) {
+    color: green;
+}
+
+modal-dialog::part(modal-section):first-child {
+    border-bottom: 1px solid black;
+}
