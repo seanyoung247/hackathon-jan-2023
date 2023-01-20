@@ -1,3 +1,3 @@
 
-import { ModalDialog } from "./components/modaldialog/modaldialog.js";
+import { ModalDialog } from "./components/modaldialog.js";
 
