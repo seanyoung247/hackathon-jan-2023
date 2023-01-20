@@ -1,0 +1,30 @@
+
+<style>
+    #modal-container {
+        display: none;
+    }
+    #modal-container.show {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        top:0; left: 0; right: 0; bottom: 0;
+        background: #000000BB;
+    }
+</style>
+
+<div id="modal-container">
+    <div id="modal-dialog" part="modal-dialog">
+        <div part="modal-header modal-section" class="modal-section">
+            <slot name="modal-header"></slot>
+        </div>
+        <div part="modal-content modal-section" class="modal-section">
+            <slot name="modal-content"></slot>
+        </div>
+        <div part="modal-footer modal-section" class="modal-section">
+            <slot name="modal-footer"></slot>
+        </div>
+    </div>
+</div>
