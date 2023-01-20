@@ -77,7 +77,7 @@ export class WebComponent extends HTMLElement {
      * @param {Object} properties - Shadow DOM properties
      * @returns {Element} - Created shadow DOM
      */
-    _createShadow(properties={mode:'open'}) {
+    _createShadowDOM(properties={mode:'open'}) {
         const shadow = this.attachShadow(properties);
         shadow.append(this.template.content.cloneNode(true));
         return shadow;
@@ -94,12 +94,24 @@ export class WebComponent extends HTMLElement {
     get attributes() { return this.constructor.attributes; }
 
     /**
+     * Called when the component has been mounted and started on the page
+     */
+    onStart() {}
+
+    /**
      * API use
      */
+    connectedCallback() {
+        this.onStart();
+    }
+
     attributeChangedCallback(property, oldValue, newValue) {
         if (oldValue === newValue) return;
         // Attributes are always strings, so decode it to the correct datatype
-        const val = this.attributes[property].type(newValue);
+        const val = this.attributes[property].type === Boolean ?
+            newValue.toLowerCase() != 'false' :
+            this.attributes[property].type(newValue);
+
         if (this[property] != val) this[property] = val;
     }
 };
