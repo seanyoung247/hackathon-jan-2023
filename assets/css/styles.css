@@ -27,3 +27,45 @@ modal-dialog::part(modal-header)
 modal-dialog::part(modal-section):first-child {
     border-bottom: 1px solid black;
 }
+
+
+
+
+
+/* General Page Styling*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    color:#072fc2;
+    width: auto;
+    max-width: 1500px;
+    margin: 0 auto;
+    float: none;
+}
+
+
+/* Header*/
+#header {
+    position: sticky;
+    width: 100%;   
+    height: 75px;
+    top: 50px;
+    margin: 0 auto;
+    background-color: white;
+    z-index: 2;
+    font-size: x-large;
+    text-align: center;
+}
+
+/* Income Section */
+#income-section {
+    margin-top: 200px;
+}
