@@ -147,7 +147,6 @@ modal-dialog::part(modal-footer) {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 1.8rem;
     height: 175px;
     width: 175px;
     border-radius: 50%;
@@ -167,6 +166,14 @@ modal-dialog::part(modal-footer) {
     font-size: 3rem;
 }
 
+.icon-title {
+    font-size: 1.4rem;
+}
+
+.icon-entertainment {
+    font-size: 1rem;
+}
+
 
 
 
@@ -178,7 +185,6 @@ modal-dialog::part(modal-footer) {
 @media (min-width: 993px) {
 
 }
-
 
 /* responsive styling for under 992px */
 @media (max-width: 992px) {
@@ -205,7 +211,6 @@ modal-dialog::part(modal-footer) {
 
     .btn {
         padding: 10px;
-        font-size: 1rem;
         height: 100px;
         width: 100px;
     }
@@ -213,6 +218,15 @@ modal-dialog::part(modal-footer) {
     .icon-image {
         font-size: 1.6rem;
     }
+
+    .icon-title {
+        font-size: 0.8rem
+    }
+
+    .icon-entertainment {
+        font-size: 0.6rem;
+    }
+    
 }
 
 /* responsive styling for under 481px */
