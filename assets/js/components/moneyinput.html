@@ -33,13 +33,15 @@
         padding-right: 2px;
         content: '$';
     } */
-
+    input:required:invalid  {
+        border: 1px solid red;
+    }
 </style>
 
 <div id="input-container">
     <div class="input-field">
         <label for="key" class="field-label">Name</label>
-        <input id="key" name="key" type="text">
+        <input id="key" name="key" type="text" required>
     </div>
     <div id="frequency-field" class="input-field">
         <label for="frequency" class="field-label">Frequency</label>
@@ -52,7 +54,7 @@
     </div>
     <div id="cost-field" class="input-field">
         <label for="value" class="field-label">Cost</label>
-        <input type="number" name="value" id="value">
+        <input type="number" name="value" id="value" required>
     </div>
     <button id="field-delete" part="field-delete">x</button>
 </div>
