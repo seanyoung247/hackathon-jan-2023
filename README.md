@@ -1,11 +1,12 @@
 # hackathon-jan-2023
 use python3 -m http.server to preview in server
 
-# <<website_name>>
+# MunnyPig SavingsApp
 ​
 ## Team Name: <<team_name>>
 ​
-[Link to Deployed Project](<<add_deployed_link_to_project_here>>)
+[Link to Deployed Project]
+https://seanyoung247.github.io/hackathon-jan-2023/
 ​
 ## Contents(#contents)
 ​
@@ -26,10 +27,23 @@ use python3 -m http.server to preview in server
   * [Acknowledgements](#acknowledgements)
 ​
 ## User Experience
-<< what paradigms of user experience did you consider, and cater to? >>
+Our app is designed for young adults entering the working world.  With a colorful fun interface and catchy name, we intended to get youndg workers thinking about budgeting and saving their money.
 ​
 ### User stories
-<< user stories here - don't be stingy on this 😅 you can even put down your expectations as a developer in this forum >>
+Our users in their late teens and early twenties will tend to have less financial commitments, so our app is clean, simple and uncluttered.  
+
+The logo and hero image explain what the app is designed to do
+
+Scrolling down the page, the user will be able to click one of the Income or Expense items, and enter in their own amounts and descriptions.
+
+With one income area and several expense areas, the user can easily add different income and expenses to the catgeories.
+
+Each category adds the amounts to give a total.
+
+The total of income and expenses and what is remaining are displayed furtehr down the main page, which updates as each new entry is added.
+
+Below that is an API section which introduces our users to certain financial information which they may be interested in.
+
 ​
 ## Technology:
 ​
@@ -45,9 +59,12 @@ use python3 -m http.server to preview in server
 ​
 ## Initial MVP idea:
 ​
-Detail plans and scope of project here....
-​
-<< consider talking about how you planned as a team here and what tools were implemented >>
+Initially we had seen a simple budget app on line.  It had 11 pages of inputs but the concept was simple - add various types of income and different expenses to various categories and it would calculate a running total.  This can be seen at https://mabs.ie/money-tools/my-budget/
+
+As a team, we realised that there were too many inputs to code in a short space of time, so we decided to simplify the inputs, which helped us decide on our target audience - young adults with less financial commitments.  This ensured we narrowed our scope.
+
+We also considered our skill level and were sure we could deliver a minimum viable product - a nice one page responsive landing page with a modal that would contain the input and functionality.  With one modal complete we could easily replicate.
+
 ​
 ### Actual idea & content:
 ​
@@ -66,30 +83,45 @@ Detail plans and scope of project here....
 ### Imagery:
 << Detail imagery used to compliment your build & theme >>
 ​
-<< ensure source attribution is maintained, and that you have used copyright free material >>
+Created on Canva
+
+<img src="assets/images/readme-images/hero-design-idea.png">;
 ​
+
 ### Wireframes:
+
+Planned functionality
+
+ * Clickable Income / Expenses section
+ * Modal pop-out box
+ * Text field to enter name of income / expense
+ * Frequency drop down
+ * Number field to enter amount
+ * Edit button to edit the fields
+ * Delete button to delete the fields
+ * Add button to add another income / expense line
+ * Total amount (sums up all the income / expense lines)
 ​
-<details>
-<summary>- Mobile Wireframes:</summary>
+
+Mobile Wireframes:
+
+<img src="assets/images/readme-images/readme-wire-frame-mobile.jpg">
 ​
-<< put all your mobile wireframes here... >>
-​
-<< consider adding some notes to detail the planned components or functionality >>
-​
-</details>
-​
-<details>
-<summary>- Desktop Wireframes:</summary>
-​
-<< put all your mobile wireframes here... >>
-​
-<< consider adding some notes to detail the planned components or functionality >>
-​
-</details>
-​
+
+Desktop Wireframes:
+​​
+
 ## Deployment
-<< detail deployment methods used here, and any extraneous circumstances to run the project locally >>
+The following steps were taken to deploy this site:
+
+1. The project was originally setup in an online repo on GitHub, with some test pages and an example modal created
+2.  The project was immediately deployed to git pages, to ensure there would be no deployment issues
+3. Under settings/pages, main branch was selected as the source
+4. Each developer worked on a separate branch from the main
+5. The project was edited in VS code in a local dev area  
+6. Regular commits were added with descriptive commit messages
+7. Commits were pushed to GitHUb regularly.  Branches were merged with the main branch regulary, ensuring all merge conflicts were easily resolved.  
+8. Link to live site: https://seanyoung247.github.io/hackathon-jan-2023/
 ​
 ## Testing
 << detail testing logs here - any known bugs, and squashed bugs 🐛🐛 >>
