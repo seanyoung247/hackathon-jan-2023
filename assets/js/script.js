@@ -1,16 +1,23 @@
 
 import { getAPIStatus } from "./components/api-insert.js";
+import { DataStore } from "./logic/datastore.js";
 
 (() => {
 
     const modal = document.getElementById('input-modal');
+    const modalTitle = document.getElementById('modal-title');
     const moneyInputs = document.getElementById('money-inputs');
 
-    function showCategoryModal(e) {
-        const category = this.dataset.category;
+    const dataStore = new DataStore();
+    dataStore.addCategory('income', 'Income', true);
+    dataStore.addCategory('home', 'Home expenses', false);
+    dataStore.addCategory('transport', 'Transport', false);
+    dataStore.addCategory('entertainment', 'Entertainment', false);
 
-        // Load category data here
-        // Then add it to the modal...
+
+    function showCategoryModal(e) {
+        const category = dataStore.getCategory(this.dataset.category);
+        modalTitle.innerText = category.name;
 
         modal.show = true;
     }
