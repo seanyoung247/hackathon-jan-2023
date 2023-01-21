@@ -85,8 +85,9 @@ We also considered our skill level and were sure we could deliver a minimum viab
 ​
 Created on Canva
 
-<img src="assets/images/readme-images/hero-design-idea.png">
+<img src="assets/images/readme-images/hero-design-idea.png">;
 ​
+
 ### Wireframes:
 
 Planned functionality
@@ -105,8 +106,6 @@ Planned functionality
 Mobile Wireframes:
 
 <img src="assets/images/readme-images/readme-wire-frame-mobile.jpg">
-​
-
 ​
 
 Desktop Wireframes:
