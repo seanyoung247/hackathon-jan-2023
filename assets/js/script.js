@@ -1,5 +1,5 @@
 
-(()=>{
+(() => {
 
     const modal = document.getElementById('test-modal');
 

@@ -17,13 +17,8 @@ modal-dialog::part(modal-dialog) {
     border-radius: 5px;
 }
 
-modal-dialog::part(modal-header)
-
 /* Only applied to the test-modal modal-dialog parts */
 #test-modal::part(modal-dialog) {
     color: green;
 }
 
-modal-dialog::part(modal-section):first-child {
-    border-bottom: 1px solid black;
-}
