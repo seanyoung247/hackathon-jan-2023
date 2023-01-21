@@ -24,8 +24,8 @@ export class MoneyInput extends WebComponent {
     set key(val) {
         if (val != this._key) {
             this._key = val;
-            this.setAttribute('value', val);
-            this.dispatchEvent(new Event('change'));
+            this.setAttribute('key', val);
+            this.dispatchEvent(new Event('change', {bubbles: true} ));
         }
     }
 
@@ -33,8 +33,8 @@ export class MoneyInput extends WebComponent {
     set cost(val) {
         if (val != this._cost) {
             this._cost = val;
-            this.setAttribute('value', val);
-            this.dispatchEvent(new Event('change'));
+            this.setAttribute('cost', val);
+            this.dispatchEvent(new Event('change', {bubbles: true} ));
         }
     }
 
@@ -57,7 +57,7 @@ export class MoneyInput extends WebComponent {
             this._frequency = val;
         }
         this.setAttribute('frequency', this._frequency);
-        this.dispatchEvent(new Event('change'));
+        this.dispatchEvent(new Event('change', {bubbles: true} ));
     }
 
     onStart() {
@@ -71,7 +71,7 @@ export class MoneyInput extends WebComponent {
             this.frequency = e.target.value;
         });
         this._delBtnEl.addEventListener('click', e => {
-            this.dispatchEvent(new CustomEvent('delete-input', {detail: this._key}));
+            this.dispatchEvent(new CustomEvent('delete-input', {detail: this._key, bubbles: true}));
             this.remove();
         });
     }
