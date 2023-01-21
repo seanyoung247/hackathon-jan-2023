@@ -4,7 +4,7 @@ const API_KEY = "XAPFls5LdIdYyVPHzAFfjw==wJu6w820CmmlKwBV";
 // from https://api-ninjas.com/api/interestrate
 
 //Asynchronous function - to handle a promise, wrap the promises in an async function and await the promise coming true.
-async function getAPIStatus(e) {
+export async function getAPIStatus(e) {
     // the queryString will consist of the URL and the parameters 
     // that we need to send over to the API with the GET request
     const queryString = `${API_URL}?api_key=${API_KEY}`;
@@ -23,5 +23,3 @@ async function getAPIStatus(e) {
     }
 
 }
-
-module.exports = getAPIStatus;
