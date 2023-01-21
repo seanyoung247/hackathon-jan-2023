@@ -3,18 +3,32 @@ import { getAPIStatus } from "./components/api-insert.js";
 
 (() => {
 
-    const modal = document.getElementById('test-modal');
+    const modal = document.getElementById('input-modal');
+    const moneyInputs = document.getElementById('money-inputs');
 
-    document.getElementById('trigger').addEventListener('click', e => {
+    function showCategoryModal(e) {
+        modal.show = !modal.show;
+    }
+
+    document.getElementById('income-btn').addEventListener('click', e => {
         modal.show = !modal.show;
     });
 
-    document.getElementById('test-input').addEventListener('change', e => {
+    document.getElementById('close-modal').addEventListener('click', e => {
+        modal.show = false;
+    });
+
+    moneyInputs.addEventListener('change', e => {
         console.log(e);
     });
 
-    document.getElementById('test-input').addEventListener('delete-input', e => {
+    moneyInputs.addEventListener('delete-input', e => {
         console.log(e.detail);
+    });
+
+    document.getElementById('add-input').addEventListener('click', e => {
+        const input = document.createElement('money-input');
+        moneyInputs.appendChild(input);
     });
 
 })();
