@@ -7,4 +7,12 @@
         modal.show = !modal.show;
     });
 
+    document.getElementById('test-input').addEventListener('change', e => {
+        console.log(e);
+    });
+
+    document.getElementById('test-input').addEventListener('delete-input', e => {
+        console.log(e.detail);
+    });
+
 })();
