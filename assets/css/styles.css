@@ -124,7 +124,7 @@ modal-dialog::part(modal-footer) {
 /* Button layout */
 #button-section {
     /* margin-top: 200px; */
-    margin: 50px 0;
+    margin: 70px 0;
     width: 100%;
 }
 
@@ -145,6 +145,7 @@ modal-dialog::part(modal-footer) {
     padding: 20px;
     text-align: center;
     text-decoration: none;
+    text-transform: uppercase;
     font-weight: bold;
     font-size: 1.8rem;
     height: 175px;
@@ -164,10 +165,7 @@ modal-dialog::part(modal-footer) {
 .icon-image {
     margin-top: 2px;
     font-size: 3rem;
-} 
-
-
-
+}
 
 
 
@@ -203,6 +201,17 @@ modal-dialog::part(modal-footer) {
     #header img {
         width: 150px;
         height: 150px;
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: 1rem;
+        height: 100px;
+        width: 100px;
+    }
+
+    .icon-image {
+        font-size: 1.6rem;
     }
 }
 
