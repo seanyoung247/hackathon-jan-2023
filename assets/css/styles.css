@@ -20,7 +20,12 @@ body {
     float: none;
 }
 
+/* input dialog */
+
 #input-modal::part(modal-dialog) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     padding: 5px;
     background-color: white;
     color: black;
@@ -43,8 +48,13 @@ body {
 
 .input-section {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+money-input {
+    margin-top: 0.5em;
 }
 
 /* Header*/
