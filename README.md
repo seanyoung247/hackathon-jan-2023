@@ -83,7 +83,9 @@ We also considered our skill level and were sure we could deliver a minimum viab
 ### Imagery:
 << Detail imagery used to compliment your build & theme >>
 ​
-<< ensure source attribution is maintained, and that you have used copyright free material >>
+Created on Canva
+
+<img src="assets/images/readme-images/hero-design-idea.png">
 ​
 ### Wireframes:
 
