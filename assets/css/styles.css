@@ -43,8 +43,6 @@ modal-dialog::part(modal-footer) {
     height: 75px;
     top: 20px;
     margin: 0 auto;
-    /* background-color: white; */
-    z-index: 2;
     font-size: x-large;
     text-align: center;
 }

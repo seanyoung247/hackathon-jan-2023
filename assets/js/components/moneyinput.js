@@ -38,6 +38,16 @@ export class MoneyInput extends WebComponent {
         }
     }
 
+    get weeklyCost() {
+        const convert = {
+            'weekly': v => v,           // One week in a week
+            'monthly': v => v / 4.333,  // Four weeks 2 days in an 'average' month
+            'quarterly': v => v / 13,   // 13 weeks per quarter
+            'yearly': v => v / 52       // 52 weeks in a year
+        }
+        return convert[this._frequency](this._cost);
+    }
+
     get frequency() { return this._frequency; }
     set frequency(val) {
         const options = ['weekly', 'monthly', 'quarterly', 'yearly'];
@@ -61,7 +71,6 @@ export class MoneyInput extends WebComponent {
             this.frequency = e.target.value;
         });
         this._delBtnEl.addEventListener('click', e => {
-            console.log(this._key);
             this.dispatchEvent(new CustomEvent('delete-input', {detail: this._key}));
             this.remove();
         });
