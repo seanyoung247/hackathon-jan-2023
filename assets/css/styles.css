@@ -9,6 +9,9 @@
 
 body {
     font-family: Roboto, sans-serif;
+    background: no-repeat center center fixed;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
     font-weight: 300;
     color:#072fc2;
     width: auto;
@@ -36,14 +39,40 @@ modal-dialog::part(modal-footer) {
 /* Header*/
 #header {
     position: sticky;
-    width: 100%;   
+    width: 100%;
     height: 75px;
-    top: 50px;
+    top: 20px;
     margin: 0 auto;
-    background-color: white;
-    /* z-index: 2; */
+    /* background-color: white; */
+    z-index: 2;
     font-size: x-large;
     text-align: center;
+}
+
+#header img {
+    float: left;
+    width: 200px;   
+    height: 200px;
+    margin-left: 10px;
+    margin-top: -50px;
+}
+
+/* Hero Section */
+#hero-section {
+    margin-top: 75px;
+    margin-left: 20%;
+    max-width: 100%;
+    height: 75vh;
+}
+
+#hero-image {
+    background-image: url("../images/moneypig-hero.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    max-width: 95%;
 }
 
 /* Income Section */
@@ -87,4 +116,43 @@ modal-dialog::part(modal-footer) {
     height: 100%;
     font-size: 1000%;
     text-align: center;
+}
+
+
+/* Media Query */
+/* responsive styling for under 992px */
+@media (min-width: 993px) {
+
+}
+
+
+/* responsive styling for under 992px */
+@media (max-width: 992px) {
+    #hero-section {
+        height: 75vh;
+    }
+
+    #header img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* responsive styling for under 768px */
+@media (max-width: 768px) {
+    #hero-section {
+        height: 50vh;
+    }
+
+    #header img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* responsive styling for under 481px */
+@media (max-width: 481px) {
+    #hero-section {
+        height: 30vh;
+    }
 }
