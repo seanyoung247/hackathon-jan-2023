@@ -84,8 +84,25 @@ body {
     margin: 0 auto;
     border-width: 1px;
     border-style: solid;
-    border-color: #3b3b3d;
+    border-color: #707070;
     border-radius: 50%;
-    width: 200px;
-    height: 200px
+    width: 150px;
+    height: 150px;
+    background-color: #707070;
+}
+
+#trigger {
+    margin: 10px auto;
+    width: 100%;
+    height: 100%;
+    font-size: 125%;
+    background-color: transparent;
+}
+
+#money-icon {
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    font-size: 500%;
+    text-align: center;
 }
