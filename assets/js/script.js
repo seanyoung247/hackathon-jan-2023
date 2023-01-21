@@ -7,12 +7,15 @@ import { getAPIStatus } from "./components/api-insert.js";
     const moneyInputs = document.getElementById('money-inputs');
 
     function showCategoryModal(e) {
-        modal.show = !modal.show;
+        const category = this.dataset.category;
+
+        // Load category data here
+        // Then add it to the modal...
+
+        modal.show = true;
     }
 
-    document.getElementById('income-btn').addEventListener('click', e => {
-        modal.show = !modal.show;
-    });
+    document.getElementById('income-btn').addEventListener('click', showCategoryModal);
 
     document.getElementById('close-modal').addEventListener('click', e => {
         modal.show = false;
