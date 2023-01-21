@@ -1,10 +1,4 @@
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 button {
     padding: 2px;
     margin: 2px;
@@ -22,3 +16,82 @@ modal-dialog::part(modal-dialog) {
     color: green;
 }
 
+modal-dialog::part(modal-section):first-child {
+    border-bottom: 1px solid black;
+}
+
+/* General Page Styling*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    color:#072fc2;
+    width: auto;
+    max-width: 1500px;
+    margin: 0 auto;
+    float: none;
+}
+
+
+/* Header*/
+#header {
+    position: sticky;
+    width: 100%;   
+    height: 75px;
+    top: 50px;
+    margin: 0 auto;
+    background-color: white;
+    z-index: 2;
+    font-size: x-large;
+    text-align: center;
+}
+
+/* Income Section */
+#income-section {
+    margin-top: 200px;
+    width: 100%;
+}
+
+#income-container-box {
+    margin: 0 auto;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #072fc2;
+    width: 90%;
+    height: 150px;
+}
+
+#income-container-circle {
+    margin: 0 auto;
+    margin-top: -75px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #707070;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    background-color: #707070;
+}
+
+#trigger {
+    margin: 2px auto;
+    width: 100%;
+    height: 100%;
+    font-size: 250%;
+    background-color: transparent;
+}
+
+#money-icon {
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;
+    font-size: 1000%;
+    text-align: center;
+}
