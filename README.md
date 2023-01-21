@@ -99,18 +99,16 @@ Planned functionality
  * Add button to add another income / expense line
  * Total amount (sums up all the income / expense lines)
 ​
-<details>
-<summary>- Mobile Wireframes:</summary>
+
+Mobile Wireframes:
 
 <img src="assets/images/readme-images/readme-wire-frame-mobile.jpg">
 ​
-</details>
+
 ​
-<details>
-<summary>- Desktop Wireframes:</summary>
-​
-</details>
-​
+
+Desktop Wireframes:
+​​
 
 ## Deployment
 The following steps were taken to deploy this site:
