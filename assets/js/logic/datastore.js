@@ -5,10 +5,9 @@ export class DataStore {
     }
 
     addCategory(key, name, income) {
-        this._categories[key] = {};
-        this._categories[key].name = name;
-        this._categories[key].income = income;
-        this._categories[key].fields = {};
+        this._categories[key] = {
+            name, income, fields: {}
+        };
     }
 
     getCategory(key) {
@@ -22,4 +21,13 @@ export class DataStore {
     getField(category, key) {
         return this._categories[category].fields[key];
     }
+
+    /* TODO:
+        - Local storage saving and loading values
+        - Field enumeration
+        - Value calculations
+          - Total income
+          - Total Expenditure
+          - 
+    */
 }

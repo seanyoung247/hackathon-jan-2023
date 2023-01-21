@@ -18,10 +18,10 @@ import { DataStore } from "./logic/datastore.js";
     function showCategoryModal(e) {
         const category = dataStore.getCategory(this.dataset.category);
         modalTitle.innerText = category.name;
+        modal.dataset.category = this.dataset.category;
 
         modal.show = true;
     }
-
     document.getElementById('income-btn').addEventListener('click', showCategoryModal);
 
     document.getElementById('close-modal').addEventListener('click', e => {
