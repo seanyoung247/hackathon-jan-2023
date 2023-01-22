@@ -1,16 +1,21 @@
 
+import { getExchangeRate } from "../api-insert.js";
+
+console.log(getExchangeRate('USD', 'EUR'));
+
 export class DataStore {
     constructor() {
-        this._categories = {};
+        this._categories = this.loadData();
     }
 
     /* Categories */
     addCategory(key, name, income) {
-        if (key) {
+        if (key && !this._categories[key]) {
             this._categories[key] = {
                 name, income, fields: {}
             };
         }
+        this.saveData();
     }
 
     getCategory(key) {
@@ -26,6 +31,7 @@ export class DataStore {
         if (key) {
             this._categories[category].fields[key] = value;
         }
+        this.saveData();
     }
 
     getField(category, key) {
@@ -34,6 +40,7 @@ export class DataStore {
 
     removeField(category, key) {
         delete this._categories[category].fields[key];
+        this.saveData();
     }
 
     fieldList(category) {
@@ -41,6 +48,19 @@ export class DataStore {
     }
 
     /* Persistent storage */
+    loadData() {
+        const data = localStorage.getItem('userData');
+        if (data) {
+            const parsed = JSON.parse(data);
+
+            return parsed;
+        }
+        return {};
+    }
+    saveData() {
+        const data = JSON.stringify(this._categories);
+        localStorage.setItem('userData', data);
+    }
 
     /* Value calculations */
     getCategoryTotal(category, frequency='weekly') {

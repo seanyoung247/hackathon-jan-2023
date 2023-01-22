@@ -29,7 +29,7 @@ body {
 #input-modal::part(modal-dialog) {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: 20px;
     background-color: white;
     color: black;
