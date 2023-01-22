@@ -73,6 +73,8 @@ We also considered our skill level and were sure we could deliver a minimum viab
 << detail idea / features / functionality here >>
 
 
+
+
 ### Future ideas
 * A user login area where the data can be saved and updated
 * 'Future additions' could be parsing off portion of savings for something specific ie. new car, or a holiday 
@@ -90,7 +92,7 @@ Inside the modals we introduced a navy blue font, and buttons to contrast agains
 Roboto font was chosen for Google Fonts for a clear, modern and easy to read font
 ​
 ### Imagery:
-Hero Image and MoneyPig logo created on Canva - https://www.canva.com/
+Draft hero image and MoneyPig logo created on Canva - https://www.canva.com/
 
 <img src="assets/images/readme-images/hero-design-idea.png">;
 ​
@@ -117,6 +119,7 @@ Mobile Wireframes:
 
 Desktop Wireframes:
 ​​
+<img src="assets/images/readme-images/desktop-home-wireframe.png">
 
 ## Deployment
 The following steps were taken to deploy this site:
@@ -139,7 +142,7 @@ The following steps were taken to deploy this site:
 << any and all code that isn't yours...must go here >>
 ​
 ### Content
-<< any content, such as facts/references/text that isn't yours...must go here >>
+All content used is unique to this project
 ​
 ### Media
 Images and logo and background was created on Canva - royalty free use
