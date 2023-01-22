@@ -109,7 +109,7 @@ export class WebComponent extends HTMLElement {
         // Attributes are always strings, so decode it to the correct datatype
         const val = this.attributes[property].type != Boolean ? 
             this.attributes[property].type(newValue) :
-            this.hasAttribute('show');
+            this.hasAttribute(property);
 
         if (this[property] != val) this[property] = val;
     }
