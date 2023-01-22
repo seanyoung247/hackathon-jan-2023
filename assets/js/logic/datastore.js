@@ -49,6 +49,6 @@ export class DataStore {
         - Value calculations
           - Total income
           - Total Expenditure
-          - 
+          - Category totals
     */
 }
