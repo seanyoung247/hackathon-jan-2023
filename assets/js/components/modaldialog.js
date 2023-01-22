@@ -5,7 +5,8 @@ export class ModalDialog extends WebComponent {
 
     static get attributes() {
         return {
-            'show': {type: Boolean, default: false}
+            'show': {type: Boolean, default: false},
+            'static': {type: Boolean, default: false}
         };
     }
 
@@ -28,9 +29,19 @@ export class ModalDialog extends WebComponent {
         }
     }
 
+    get static() { return this._static; }
+    set static(val) {
+        this._static = val;
+        if (val) {
+            this.setAttribute('static', true);
+        } else {
+            this.removeAttribute('static');
+        }
+    }
+
     onStart() {
         this._container.addEventListener('click', () => {
-            this.show = false;
+            if (!this._static) this.show = false;
         });
         this._dialog.addEventListener('click', e => {
             e.stopPropagation();
