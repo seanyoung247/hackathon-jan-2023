@@ -40,6 +40,9 @@ import { DataStore } from "./logic/datastore.js";
         modal.show = true;
     }
     document.getElementById('income-btn').addEventListener('click', showCategoryModal);
+    document.getElementById('home-btn').addEventListener('click', showCategoryModal);
+    document.getElementById('transport-btn').addEventListener('click', showCategoryModal);
+    document.getElementById('entertainment-btn').addEventListener('click', showCategoryModal);
 
     document.getElementById('close-modal').addEventListener('click', e => {
         modal.show = false;
