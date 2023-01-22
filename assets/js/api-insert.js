@@ -1,5 +1,4 @@
 
-
 const API_URL = 'https://api.api-ninjas.com/v1/exchangerate';
 const API_KEY = "XAPFls5LdIdYyVPHzAFfjw==wJu6w820CmmlKwBV";
 

@@ -1,4 +1,8 @@
 
+import { getExchangeRate } from "../api-insert.js";
+
+console.log(getExchangeRate('USD', 'EUR'));
+
 export class DataStore {
     constructor() {
         this._categories = this.loadData();
