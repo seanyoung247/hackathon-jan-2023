@@ -79,6 +79,7 @@ import { DataStore } from "./logic/datastore.js";
     });
 
     moneyInputs.addEventListener('delete-input', e => {
+        dataStore.removeField(modal.dataset.category, e.target.key);
         updateCategoryTotal();
     });
 
