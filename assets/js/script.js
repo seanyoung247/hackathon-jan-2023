@@ -1,5 +1,4 @@
 
-import { getAPIStatus } from "./components/api-insert.js";
 import { DataStore } from "./logic/datastore.js";
 
 (() => {
@@ -47,7 +46,7 @@ import { DataStore } from "./logic/datastore.js";
             input.frequency = value.freq;
             moneyInputs.appendChild(input);
         }
-        document.getElementById('category-total').innerText = dataStore.getCategoryTotal(categoryName);
+        updateCategoryTotal();
 
         modal.show = true;
     }
@@ -59,6 +58,7 @@ import { DataStore } from "./logic/datastore.js";
     document.getElementById('close-modal').addEventListener('click', e => {
         modal.show = false;
         clearModal();
+        // Do main page recalculations now...
     });
 
     moneyInputs.addEventListener('change', e => {
