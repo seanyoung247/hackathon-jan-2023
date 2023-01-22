@@ -63,7 +63,7 @@ Initially we had seen a simple budget app on line.  It had 11 pages of inputs bu
 
 As a team, we realised that there were too many inputs to code in a short space of time, so we decided to simplify the inputs, which helped us decide on our target audience - young adults with less financial commitments.  This ensured we narrowed our scope.
 
-We also considered our skill level and were sure we could deliver a minimum viable product - a nice one page responsive landing page with a modal that would contain the input and functionality.  With one modal complete we could easily replicate.
+We also considered our skill level and were sure we could deliver a minimum viable product - a nice one page responsive landing page with modals that would contain the input and functionality.  With one modal complete we could easily replicate.
 
 ​
 ### Actual idea & content:
@@ -71,19 +71,26 @@ We also considered our skill level and were sure we could deliver a minimum viab
 << how does you final product/project match up to your initial mvp plans >>
 ​
 << detail idea / features / functionality here >>
+
+
+### Future ideas
+* A user login area where the data can be saved and updated
+* 'Future additions' could be parsing off portion of savings for something specific ie. new car, or a holiday 
+* remainder going into long term savings with interest rates applied.
+* links to various financial options such as investing in commodoties, Stocks & Shares ISA, Mortgage ISA etc
+
 ​
 ## Design
 ​
 ### Color Scheme:
-<< detail your color palette here >>
+A pale blue background was chosen to contrast with black text and pink elements taken from the Pig icon for consistency
+Inside the modals we introduced a navy blue font, and buttons to contrast against the pink background
 ​
 ### Typography:
-<< what font pairings did your team consider and pick? And why? >>
+Roboto font was chosen for Google Fonts for a clear, modern and easy to read font
 ​
 ### Imagery:
-<< Detail imagery used to compliment your build & theme >>
-​
-Created on Canva
+Hero Image and MoneyPig logo created on Canva - https://www.canva.com/
 
 <img src="assets/images/readme-images/hero-design-idea.png">;
 ​
@@ -135,7 +142,13 @@ The following steps were taken to deploy this site:
 << any content, such as facts/references/text that isn't yours...must go here >>
 ​
 ### Media
-<< you may have already done this above in the Imagery section, but just in case, please attribute Media acquisition here >>
+Images and logo and background was created on Canva - royalty free use
+https://www.canva.com/help/licenses-copyright-legal-commercial-use/
 ​
 ### Acknowledgements
-<< personal thanks and praise 🙌 >>
+What an incredible team, credits go to: and in no particular order:
+* Monica came up with the basic idea of a budgeting app and having an example to look at. She also worked on the API section and styled the Modals
+* Rhys created the intial wireframes which gave the team something visual to aim for, and then played a big part in styling the landing page.
+* Russ took on the role of Scrum Master, GitHub and Gitpod manager and worked on intial HTML and added to landing page CSS
+* Marcus worked on a canva design to bring some color and the design to life
+* A massive shout out to Sean who lead the Javascript Section and created the modal functionality, which is the core piece of the app.
