@@ -1,8 +1,4 @@
 
-import { getExchangeRate } from "../api-insert.js";
-
-console.log(getExchangeRate('USD', 'EUR'));
-
 export class DataStore {
     constructor() {
         this._categories = this.loadData();
@@ -98,10 +94,6 @@ export class DataStore {
         const expenses = this.getTotalExpenses(frequency);
         return income - expenses;
     }
-
-    /* TODO:
-        - Local storage saving and loading values
-    */
 }
 
 // Category total (at the bottom of the modal). Total income, total expenses, and remaining income after expenses

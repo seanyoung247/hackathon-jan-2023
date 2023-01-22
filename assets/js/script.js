@@ -1,7 +1,9 @@
-
+import { convertCurrency } from "./api-insert.js";
 import { DataStore } from "./logic/datastore.js";
 
 (() => {
+
+    convertCurrency('USD', 'EUR', 500).then(data => console.log(data));
 
     const modal = document.getElementById('input-modal');
     const modalTitle = document.getElementById('modal-title');
