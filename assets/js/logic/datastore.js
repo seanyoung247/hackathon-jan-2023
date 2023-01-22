@@ -79,13 +79,8 @@ export class DataStore {
         return income - expenses;
     }
 
-
     /* TODO:
         - Local storage saving and loading values
-        - Value calculations
-          - Total income
-          - Total Expenditure
-          - Category totals
     */
 }
 
