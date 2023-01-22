@@ -32,18 +32,23 @@
                     <i id="money-icon" class="fa-regular fa-money-bill-1"></i>
                 </div>
                 <div>
-                    <button id="trigger">INCOME</button>
+                    <button id="income-btn" data-category="income">INCOME</button>
                 </div>
-                <modal-dialog id="test-modal">
-                    <div slot="modal-header">Modal Header</div>
-                    <div slot="modal-content">
-                        <money-input id="test-input"/>
-                    </div>
-                    <div slot="modal-footer">Modal Footer</div>
-                </modal-dialog>
             </div>
         </div>
     </section>
+
+    <modal-dialog id="input-modal" data-category="none">
+        <div class="input-section" slot="modal-header">
+            <h2 id="modal-title">Header Text here</h2>
+            <button id="add-input">+</button>
+        </div>
+        <div id="money-inputs" class="input-section" slot="modal-content">
+        </div>
+        <div class="input-section" slot="modal-footer">
+            <button id="close-modal">Back</button>
+        </div>
+    </modal-dialog>
 
 </body>
 </html>

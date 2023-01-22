@@ -20,20 +20,41 @@ body {
     float: none;
 }
 
-/* applied to all modal-dialog parts */
-modal-dialog::part(modal-dialog) {
+/* input dialog */
+
+#input-modal::part(modal-dialog) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     padding: 5px;
     background-color: white;
     color: black;
     border-radius: 5px;
 }
-modal-dialog::part(modal-header) {
+#input-modal::part(modal-header) {
     margin-bottom: 0.5em;
     border-bottom: 1px solid black;
 }
-modal-dialog::part(modal-footer) {
+#input-modal::part(modal-footer) {
     margin-top: 0.5em;
     border-top: 1px solid black;
+}
+
+#input-modal::part(modal-dialog) {
+    max-width: 900px;
+    width: 50%;
+    height: 50%;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+money-input {
+    margin-top: 0.5em;
 }
 
 /* Header*/
@@ -43,8 +64,6 @@ modal-dialog::part(modal-footer) {
     height: 75px;
     top: 20px;
     margin: 0 auto;
-    /* background-color: white; */
-    z-index: 2;
     font-size: x-large;
     text-align: center;
 }
@@ -102,7 +121,7 @@ modal-dialog::part(modal-footer) {
     background-color: #707070;
 }
 
-#trigger {
+#income-btn {
     margin: 2px auto;
     width: 100%;
     height: 100%;
@@ -136,6 +155,9 @@ modal-dialog::part(modal-footer) {
         width: 250px;
         height: 250px;
     }
+    #input-modal::part(modal-dialog) {
+        width: 75%;
+    }
 }
 
 /* responsive styling for under 768px */
@@ -148,11 +170,19 @@ modal-dialog::part(modal-footer) {
         width: 150px;
         height: 150px;
     }
+    #input-modal::part(modal-dialog) {
+        width: 85%;
+        height: 75%;
+    }
 }
 
 /* responsive styling for under 481px */
 @media (max-width: 481px) {
     #hero-section {
         height: 30vh;
+    }
+    #input-modal::part(modal-dialog) {
+        width: 100%;
+        height: 100%;
     }
 }
