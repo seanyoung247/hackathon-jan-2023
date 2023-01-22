@@ -26,5 +26,6 @@ export function convertCurrency(from, to, value) {
                 const exr = data.exchange_rate;
                 resolve(value / exr);
             })
+            .catch(reject)
     });
 }
