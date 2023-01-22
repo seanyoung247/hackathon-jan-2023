@@ -47,15 +47,15 @@ Below that is an API section which introduces our users to certain financial inf
 ​
 ## Technology:
 ​
-<< Detail your techstack here, and why you chose it. >>
+The site is based around a dynamic frontend using HTML/CSS and JavaScript. In order to simplify custom component creation and use, [WebComponents](https://developer.mozilla.org/en-US/docs/Web/Web_Components) are used for several user interface components. This allows the encapsulation of layout, styling, and state. It also allows easy reuse of components and code. WebComponent source code can be found in the [components directory](https://github.com/seanyoung247/hackathon-jan-2023/tree/main/assets/js/components).
+
+In order to promote code modularity and aid in collaboration, ES6 modules are used. Individual features are seperated out to their own module and code is imported when and where it is needed.
 ​
-<< list your languages & tools below: >>
-​
-*  << languages >>
-	* << list the langauge & reason for using it >>
-​
-* << tools >>
-  * << list the tool & reason for using it >>
+* Languages
+	* HTML
+  * CSS
+  * JavaScript
+
 ​
 ## Initial MVP idea:
 ​
