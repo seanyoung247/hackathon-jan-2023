@@ -66,9 +66,9 @@ export class DataStore {
     getCategoryTotal(category, frequency='weekly') {
         let total = 0;
         for (const field of Object.values(this._categories[category].fields)) {
-            total += toWeekly(field.cost, field.freq);
+            total += toYearly(field.cost, field.freq);
         }
-        return fromWeekly(total, frequency);
+        return fromYearly(total, frequency);
     }
 
     getTotalIncome(frequency='weekly') {
@@ -100,20 +100,19 @@ export class DataStore {
     }
 }
 
-// Category total (at the bottom of the modal). Total income, total expenses, and remaining income after expenses
 const factor = {
-    'weekly': 1,        // One week in a week
-    'monthly': 4.33,    // Average of 4.33 weeks in a month
-    'quarterly': 13,    // 13 weeks in a quarter
-    'yearly': 52        // 52 weeks in a year
+    'weekly': 52,       // 52 weeks in a year
+    'monthly': 12,      // 12 months in a year
+    'quarterly': 4,     // 4 quarters in a year
+    'yearly': 1         // 1 year in a year
 }
 
-function toWeekly(value, frequency) {
-    if (value) return value / factor[frequency];
+function toYearly(value, frequency) {
+    if (value) return value * factor[frequency];
     return 0;
 }
 
-function fromWeekly(value, frequency) {
-    if (value) return value * factor[frequency];
+function fromYearly(value, frequency) {
+    if (value) return value / factor[frequency];
     return 0;
 }
