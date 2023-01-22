@@ -8,7 +8,7 @@ export class DataStore {
     addCategory(key, name, income) {
         if (key && !this._categories[key]) {
             this._categories[key] = {
-                name, income, fields: {}
+                name, income, fieldId: 0, fields: {}
             };
         }
         this.saveData();
@@ -20,6 +20,10 @@ export class DataStore {
 
     categoryList() {
         return Object.entries(this._categories);
+    }
+
+    getFieldId(key) {
+        return this._categories[key].fieldId++;
     }
 
     /* Data Fields */
