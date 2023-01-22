@@ -26,11 +26,18 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 5px;
+    padding: 20px;
     background-color: white;
     color: black;
     border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #072fc2;
 }
+
 #input-modal::part(modal-header) {
     margin-bottom: 0.5em;
     border-bottom: 1px solid black;
@@ -44,6 +51,12 @@ body {
     max-width: 900px;
     width: 50%;
     height: 50%;
+    background-color: #e9e2e2;
+}
+
+.input-section::part(modal-dialog){
+
+    background-color: #ffd7cd;
 }
 
 .input-section {
@@ -51,10 +64,54 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #ffd7cd;    
+    border: 1px transparent;
+}
+
+#modal-title {
+    border: 1px solid transparent;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+button#add-input {
+    background-color: #072fc2;
+    color: #fafafa;
+    border-color: #072fc2;
+    font-weight: bold;
+    padding: 6px 12px;
+    font-size: 20px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+button#close-modal {
+    background-color: #072fc2;
+    color: #fafafa;
+    border-color: #072fc2;
+    font-weight: bold;
+    padding: 6px 12px;
+    font-size: 20px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    margin: 20px;
 }
 
 money-input {
     margin-top: 0.5em;
+}
+
+money-input::part(field-delete){
+    background-color: #072fc2;
+    color: #fafafa;
+    border-color: #072fc2;
+    font-weight: bold;
+    padding: 6px 12px;
+    font-size: 20px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    margin: 20px;
 }
 
 /* Header*/
