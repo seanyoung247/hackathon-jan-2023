@@ -44,6 +44,7 @@ import { DataStore } from "./logic/datastore.js";
         for (const [key,value] of dataStore.fieldList(categoryName)) {
             const input = document.createElement('money-input');
             input.key = key;
+            input.name = value.name;
             input.cost = value.cost;
             input.frequency = value.freq;
             moneyInputs.appendChild(input);
@@ -71,8 +72,9 @@ import { DataStore } from "./logic/datastore.js";
         // Add or update the changed field in the dataStore
         dataStore.setField(
             modal.dataset.category, 
-            e.target.key, 
+            e.target.key,
             {
+                name: e.target.name, 
                 cost: e.target.cost, 
                 freq: e.target.frequency
             }
@@ -94,6 +96,8 @@ import { DataStore } from "./logic/datastore.js";
 
     document.getElementById('add-input').addEventListener('click', e => {
         const input = document.createElement('money-input');
+        const fieldId = dataStore.getFieldId(modal.dataset.category);
+        input.key = `${modal.dataset.category}_${fieldId}`;
         moneyInputs.appendChild(input);
     });
 
