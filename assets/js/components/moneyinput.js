@@ -24,6 +24,7 @@ export class MoneyInput extends WebComponent {
     set key(val) {
         if (val != this._key) {
             this._key = val;
+            this._keyEl.value = val;
             this.setAttribute('key', val);
             this.dispatchEvent(new Event('change', {bubbles: true} ));
         }
@@ -33,19 +34,10 @@ export class MoneyInput extends WebComponent {
     set cost(val) {
         if (val != this._cost) {
             this._cost = val;
+            this._valueEl.value = val.toFixed(2);
             this.setAttribute('cost', val);
             this.dispatchEvent(new Event('change', {bubbles: true} ));
         }
-    }
-
-    get weeklyCost() {
-        const convert = {
-            'weekly': v => v,           // One week in a week
-            'monthly': v => v / 4.333,  // Four weeks 2 days in an 'average' month
-            'quarterly': v => v / 13,   // 13 weeks per quarter
-            'yearly': v => v / 52       // 52 weeks in a year
-        }
-        return convert[this._frequency](this._cost);
     }
 
     get frequency() { return this._frequency; }
@@ -65,7 +57,7 @@ export class MoneyInput extends WebComponent {
             this.key = e.target.value;
         });
         this._valueEl.addEventListener('change', e => {
-            this.cost = e.target.value;
+            this.cost = parseFloat(e.target.value);
         });
         this._frequencyEl.addEventListener('change', e => {
             this.frequency = e.target.value;

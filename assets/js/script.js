@@ -14,11 +14,28 @@ import { DataStore } from "./logic/datastore.js";
     dataStore.addCategory('transport', 'Transport', false);
     dataStore.addCategory('entertainment', 'Entertainment', false);
 
+    function clearModal() {
+        modal.dataset.category = 'none';
+        modalTitle.innerText = '';
+        moneyInputs.innerText = '';
+    }
 
     function showCategoryModal(e) {
-        const category = dataStore.getCategory(this.dataset.category);
+        // Get the current category
+        const categoryName = this.dataset.category
+        const category = dataStore.getCategory(categoryName);
+        clearModal();
+        // Set the modal title and data attribute to the current category
         modalTitle.innerText = category.name;
-        modal.dataset.category = this.dataset.category;
+        modal.dataset.category = categoryName;
+        // Create money-inputs for all the fields of this category
+        for (const [key,value] of dataStore.fieldList(categoryName)) {
+            const input = document.createElement('money-input');
+            input.key = key;
+            input.cost = value.cost;
+            input.frequency = value.freq;
+            moneyInputs.appendChild(input);
+        }
 
         modal.show = true;
     }
@@ -26,10 +43,19 @@ import { DataStore } from "./logic/datastore.js";
 
     document.getElementById('close-modal').addEventListener('click', e => {
         modal.show = false;
+        clearModal();
     });
 
     moneyInputs.addEventListener('change', e => {
-        console.log(e);
+        // Add or update the changed field in the dataStore
+        dataStore.setField(
+            modal.dataset.category, 
+            e.target.key, 
+            {
+                cost: e.target.cost, 
+                freq: e.target.frequency
+            }
+        );
     });
 
     moneyInputs.addEventListener('delete-input', e => {

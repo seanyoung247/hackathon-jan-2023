@@ -6,9 +6,11 @@ export class DataStore {
 
     /* Categories */
     addCategory(key, name, income) {
-        this._categories[key] = {
-            name, income, fields: {}
-        };
+        if (key) {
+            this._categories[key] = {
+                name, income, fields: {}
+            };
+        }
     }
 
     getCategory(key) {
@@ -21,7 +23,9 @@ export class DataStore {
 
     /* Data Fields */
     setField(category, key, value) {
-        this._categories[category].fields[key] = value;
+        if (key) {
+            this._categories[category].fields[key] = value;
+        }
     }
 
     getField(category, key) {
