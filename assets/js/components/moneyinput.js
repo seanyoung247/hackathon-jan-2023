@@ -6,6 +6,7 @@ export class MoneyInput extends WebComponent {
     static get attributes() {
         return {
             'key': {type: String, default: ''},
+            'name': {type: String, default: ''},
             'cost': {type: Number, default: 0},
             'frequency': {type: String, default: 'weekly'}
         }
@@ -14,18 +15,18 @@ export class MoneyInput extends WebComponent {
     constructor() {
         super();
         this._createShadowDOM();
-        this._keyEl = this.shadowRoot.getElementById('key');
+        this._nameEl = this.shadowRoot.getElementById('name');
         this._valueEl = this.shadowRoot.getElementById('value');
         this._frequencyEl = this.shadowRoot.getElementById('frequency');
         this._delBtnEl = this.shadowRoot.getElementById('field-delete');
     }
 
-    get key() { return this._key; }
-    set key(val) {
-        if (val != this._key) {
-            this._key = val;
-            this._keyEl.value = val;
-            this.setAttribute('key', val);
+    get name() { return this._name; }
+    set name(val) {
+        if (val != this._name) {
+            this._name = val;
+            this._nameEl.value = val;
+            this.setAttribute('name', val);
             this.dispatchEvent(new Event('change', {bubbles: true} ));
         }
     }
@@ -53,8 +54,8 @@ export class MoneyInput extends WebComponent {
     }
 
     onStart() {
-        this._keyEl.addEventListener('change', e => {
-            this.key = e.target.value;
+        this._nameEl.addEventListener('change', e => {
+            this.name = e.target.value;
         });
         this._valueEl.addEventListener('change', e => {
             this.cost = parseFloat(e.target.value);
