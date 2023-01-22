@@ -67,12 +67,4 @@ import { DataStore } from "./logic/datastore.js";
         moneyInputs.appendChild(input);
     });
 
-    document.getElementById('test-input').addEventListener('change', e => {
-        console.log(e);
-    });
-
-    document.getElementById('test-input').addEventListener('delete-input', e => {
-        console.log(e.detail);
-    });
-
 })();
