@@ -7,6 +7,10 @@
     margin: 0;
 }
 
+modal-dialog:not(:defined) {
+    display: none;
+}
+
 body {
     font-family: Roboto, sans-serif;
     background: no-repeat center center fixed;
