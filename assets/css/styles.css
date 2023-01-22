@@ -223,8 +223,12 @@ money-input::part(field-delete){
     font-size: 1.1rem;
 }
 
-.icon-entertainment {
-    font-size: 0.8rem;
+
+
+
+/* Total section */
+.test-container {
+    padding: 0.6rem;
 }
 
 
