@@ -43,6 +43,18 @@ export class DataStore {
     /* Persistent storage */
 
     /* Value calculations */
+    getCategoryTotal(category, frequency='weekly') {
+        let total = 0;
+        for (const field of Object.values(this._categories[category].fields)) {
+            total += toWeekly(field.cost, field.freq);
+        }
+        return fromWeekly(total, frequency);
+    }
+
+    getTotalIncome(frequency='weekly') {}
+    getTotalExpenses(frequency='weekly') {}
+    getDisposableIncome(frequency='weekly') {}
+
 
     /* TODO:
         - Local storage saving and loading values
@@ -51,4 +63,22 @@ export class DataStore {
           - Total Expenditure
           - Category totals
     */
+}
+
+// Category total (at the bottom of the modal). Total income, total expenses, and remaining income after expenses
+const factor = {
+    'weekly': 1,
+    'monthly': 4.33,
+    'quarterly': 13,
+    'yearly': 52
+}
+
+function toWeekly(value, frequency) {
+    if (value) return value / factor[frequency];
+    return 0;
+}
+
+function fromWeekly(value, frequency) {
+    if (value) return value * factor[frequency];
+    return 0;
 }

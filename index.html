@@ -80,6 +80,18 @@
         <div id="money-inputs" class="input-section" slot="modal-content">
         </div>
         <div class="input-section" slot="modal-footer">
+            <div>
+                <select name="frequency" id="category-total-frequency">
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="quarterly">Quarterly</option>
+                    <option value="yearly">Yearly</option>
+                </select>
+            </div>
+            <div>
+                <label for="">Category Total</label>
+                <input type="text" id="category-total" value="0.00" readonly>
+            </div>
             <button id="close-modal">Back</button>
         </div>
     </modal-dialog>

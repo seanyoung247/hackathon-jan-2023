@@ -7,12 +7,23 @@ import { DataStore } from "./logic/datastore.js";
     const modal = document.getElementById('input-modal');
     const modalTitle = document.getElementById('modal-title');
     const moneyInputs = document.getElementById('money-inputs');
+    const totalEl = document.getElementById('category-total');
+    const freqEl = document.getElementById('category-total-frequency');
 
     const dataStore = new DataStore();
     dataStore.addCategory('income', 'Income', true);
     dataStore.addCategory('home', 'Home expenses', false);
     dataStore.addCategory('transport', 'Transport', false);
     dataStore.addCategory('entertainment', 'Entertainment', false);
+
+    function updateCategoryTotal() {
+        const frequency = freqEl.value;
+        totalEl.value = 
+        dataStore.getCategoryTotal(
+            modal.dataset.category,
+            frequency
+        ).toFixed(2);
+    }
 
     function clearModal() {
         modal.dataset.category = 'none';
@@ -36,6 +47,7 @@ import { DataStore } from "./logic/datastore.js";
             input.frequency = value.freq;
             moneyInputs.appendChild(input);
         }
+        document.getElementById('category-total').innerText = dataStore.getCategoryTotal(categoryName);
 
         modal.show = true;
     }
@@ -59,10 +71,15 @@ import { DataStore } from "./logic/datastore.js";
                 freq: e.target.frequency
             }
         );
+        updateCategoryTotal();
+    });
+
+    freqEl.addEventListener('change', e => {
+        updateCategoryTotal();
     });
 
     moneyInputs.addEventListener('delete-input', e => {
-        dataStore.removeField(modal.dataset.category, e.target.key);
+        updateCategoryTotal();
     });
 
     document.getElementById('add-input').addEventListener('click', e => {
