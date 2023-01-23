@@ -65,6 +65,10 @@ import { DataStore } from "./logic/datastore.js";
     });
 
     moneyInputs.addEventListener('change', e => {
+        const freqSelect = document.getElementById('total-frequency');
+        const totIncome = document.getElementById('total-income');
+        const totExpenses = document.getElementById('total-expenses');
+        const totDisposable = document.getElementById('total-disposable');
         // Add or update the changed field in the dataStore
         dataStore.setField(
             modal.dataset.category, 
@@ -75,6 +79,9 @@ import { DataStore } from "./logic/datastore.js";
                 freq: e.target.frequency
             }
         );
+        totIncome.value = dataStore.getTotalIncome(freqSelect.value);
+        totExpenses.value = dataStore.getTotalExpenses(freqSelect.value);
+        totDisposable.value = dataStore.getDisposableIncome(freqSelect.value);
         updateCategoryTotal();
     });
 
