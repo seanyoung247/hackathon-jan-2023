@@ -56,21 +56,31 @@
     <!-- Total section  -->
     <section id="total-section">
         <h2>Your Total Amount</h2>
-        <div class="total-container">
-            <p>Calculated Budget</p>
-            <select name="frequency" id="total-frequency">
-                <option value="weekly">Weekly</option>
-                <option value="monthly">Monthly</option>
-                <option value="quarterly">Quarterly</option>
-                <option value="yearly">Yearly</option>
-            </select>
-            <div class="total-input-container">
-                <label for="total-income">Total Income</label>
-                <input type="text" id="total-income" value="0.00" readonly>
-                <label for="total-expenses">Total Expenses</label>
-                <input type="text" id="total-expenses" value="0.00" readonly>
-                <label for="total-disposable">Disposable Income</label>
-                <input type="text" id="total-disposable" value="0.00" readonly>
+        <div class="container">
+            <div class="row">
+                <div class="col-75">
+                    <label for="country">Calculated Budget</label>
+                    <select name="frequency" id="total-frequency">
+                        <option value="weekly">Weekly</option>
+                        <option value="monthly">Monthly</option>
+                        <option value="quarterly">Quarterly</option>
+                        <option value="yearly">Yearly</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-30">
+                    <label for="total-income">Total Income</label>
+                    <input type="text" id="total-income" value="0.00" readonly>
+                </div>
+                <div class="col-30">
+                    <label for="total-expenses">Total Expenses</label>
+                    <input type="text" id="total-expenses" value="0.00" readonly>
+                </div>
+                <div class="col-30">
+                    <label for="total-disposable">Total Disposable</label>
+                    <input type="text" id="total-disposable" value="0.00" readonly>
+                </div>
             </div>
         </div>
     </section>
@@ -78,24 +88,54 @@
     <!-- API section  -->
     <section id="api-section">
         <h2>Convert Currency</h2>
-        <div class="api-container">
-            <div class="api-input-container">
-                <label for="">Amount</label>
-                <input type="text" id="api-amount" value="0.00" readonly>
+        <div class="container">
+            <div class="row">
+                <div class="col-75">
+                    <label for="total-income">Amount</label>
+                    <input type="text" id="total-income" value="0.00" readonly>
+                </div>
             </div>
-            <p>From</p>
-            <select name="currency-from" id="currency-from">
-                <option value="usd">USD</option>
-                <option value="gbp">GBP</option>
-                <option value="quarterly">AUS</option>
-            </select>
-            <p>To</p>
-            <select name="currency-to" id="currency-to">
-                <option value="usd">USD</option>
-                <option value="gbp">GBP</option>
-                <option value="quarterly">AUS</option>
-            </select>
-            <button id="btn-convert">Convert</button>
+            <div class="row">
+                <div class="col-75">
+                    <label for="currency-from">From</label>
+                    <select name="currency-from" id="currency-from">
+                        <option value="gbp">GBP</option>
+                        <option value="eur">EUR</option>
+                        <option value="gbp">GBP</option>
+                        <option value="usd">USD</option>
+                        <option value="can">CAN</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-75">
+                    <label for="currency-to">To</label>
+                    <select name="currency-to" id="currency-to">
+                        <option value="gbp">GBP</option>
+                        <option value="eur">EUR</option>
+                        <option value="gbp">GBP</option>
+                        <option value="usd">USD</option>
+                        <option value="can">CAN</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-75">
+                    <label for="total-income">Returns</label>
+                    <input type="text" id="total-income" value="0.00" readonly>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-75">
+                    <button id="btn-convert">Convert</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-75">
+                    <label for="total-income">Returns</label>
+                    <input type="text" id="total-income" value="0.00" readonly>
+                </div>
+            </div>
         </div>
     </section>
 
