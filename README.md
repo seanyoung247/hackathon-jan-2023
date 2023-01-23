@@ -41,9 +41,9 @@ With one income area and several expense areas, the user can easily add differen
 
 Each category adds the amounts entered to give a total.
 
-The total of Income and of Expenses and of the balance the user has remaining are displayed below the buttons on the main page, and these totals update as each new entry is added.
+The total of Income and of Expenses and of the balance the user has remaining are displayed below the buttons on the main page, and these totals update as each new entry is added. A user may choose to view these totals by weekly, monthly, quarterly or annual view.
 
-Below that is an API section which enables our users to calculate the convertion of their funds between various currencies using same day exchange rates.
+Below that is an API section which enables our users to calculate the convertion of an amount of money between various currencies using same day exchange rates.
 
 ​
 ## Technology:
@@ -74,8 +74,10 @@ We also considered our skill level and were sure we could deliver a minimum viab
 ### Features included
 The MVP was very close to the planned idea:
 * We created an attractive landing page;
-* We focussed on 4 input icons - Income, Home, Transport and Fun;
-* The Modals allowed correct input of data and totaled up the category.
+* We focussed on 4 input icons - Income, Home, Transport and Fun - which launch modals based on category on user click;
+* The Modals allow correct input of data and total up the category;
+* The totals from Income and the combined expenses populate a section on the Landing page where the user can view, in addition to those totals, their remaining budget;
+* A currency converting API feature, to enable our user to access same day currency conversion rates.
 
 
 
@@ -113,6 +115,14 @@ Income modal on launch and during adding a category.
 Expenses modals in stages of use.
 
 <img src="assets/images/readme-images/Home-Modal-before categories.png">  <img src="assets/images/readme-images/Transport-Modal-with-entry.png"> <img src="assets/images/readme-images/Entertainment-Modal-with-multiple-entries.png">
+
+Totals section, with calculations updated and populated as the user inputs to the Income and Expenses modals. Our users can elect to view their totals by weekly, monthly, quarterly or yearly view.
+
+<img src="assets/images/readme-images/Totals-section.png">
+
+Currency Conversion section, with drop-down currency lists, and a 'Convert' button.
+
+<img src="assets/images/readme-images/Convert-Currency-section.png">
 
 ### Wireframes:
 
