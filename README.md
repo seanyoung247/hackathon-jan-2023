@@ -101,6 +101,18 @@ Draft hero image and MoneyPig logo created on [Canva](https://www.canva.com/)
 <img src="assets/images/readme-images/hero-design-idea.png">
 ​
 
+Buttons on Landing page which launch modal.
+
+<img src="assets/images/readme-images/Modal-launch-buttons.png">
+
+Income modal on launch and during adding a category.
+
+<img src="assets/images/readme-images/Income-Modal-launch.png">  
+<img src="assets/images/readme-images/Income-Modal-add-category.png">
+
+Expenses modals in stages of use.
+
+<img src="assets/images/readme-images/Home-Modal-before categories.png">  <img src="assets/images/readme-images/Transport-Modal-with-entry.png"> <img src="assets/images/readme-images/Entertainment-Modal-with-multiple-entries.png">
 
 ### Wireframes:
 
@@ -151,9 +163,12 @@ The following steps were taken to deploy this site:
 The following tests were performed on the app
 * W3C HTML validation
 * Lighthouse Test
+
+<img src="assets/images/readme-images/Lighthouse-report.png">
+
 * Manual testing of the Modal Category Calculation
 
-* W3C CSS Validation could not be performed as the Jigsaw test site was not available up to submission time.
+W3C CSS Validation could not be performed as the Jigsaw test site was not available up to submission time.
 
 ### Bugs known
 
