@@ -16,6 +16,7 @@ import { DataStore } from "./logic/datastore.js";
     dataStore.addCategory('home', 'Home expenses', false);
     dataStore.addCategory('transport', 'Transport', false);
     dataStore.addCategory('entertainment', 'Entertainment', false);
+    updateOutputs();
 
     function updateCategoryTotal() {
         const frequency = freqEl.value;
@@ -64,11 +65,18 @@ import { DataStore } from "./logic/datastore.js";
         // Do main page recalculations now...
     });
 
-    moneyInputs.addEventListener('change', e => {
+    function updateOutputs() {
         const freqSelect = document.getElementById('total-frequency');
         const totIncome = document.getElementById('total-income');
         const totExpenses = document.getElementById('total-expenses');
         const totDisposable = document.getElementById('total-disposable');
+        totIncome.value = dataStore.getTotalIncome(freqSelect.value).toFixed(2);
+        totExpenses.value = dataStore.getTotalExpenses(freqSelect.value).toFixed(2);
+        totDisposable.value = dataStore.getDisposableIncome(freqSelect.value).toFixed(2);
+    }
+    document.getElementById('total-frequency').addEventListener('change', updateOutputs);
+
+    moneyInputs.addEventListener('change', e => {
         // Add or update the changed field in the dataStore
         dataStore.setField(
             modal.dataset.category, 
@@ -79,10 +87,8 @@ import { DataStore } from "./logic/datastore.js";
                 freq: e.target.frequency
             }
         );
-        totIncome.value = dataStore.getTotalIncome(freqSelect.value);
-        totExpenses.value = dataStore.getTotalExpenses(freqSelect.value);
-        totDisposable.value = dataStore.getDisposableIncome(freqSelect.value);
         updateCategoryTotal();
+        updateOutputs();
     });
 
     freqEl.addEventListener('change', e => {
