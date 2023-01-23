@@ -121,11 +121,11 @@ money-input::part(field-delete){
     color: #fafafa;
     border-color: #072fc2;
     font-weight: bold;
-    padding: 6px 12px;
-    font-size: 20px;
+    padding: 2px 4px;
+    font-size: 10px;
     border: 1px solid transparent;
     border-radius: 5px;
-    margin: 20px;
+    margin: 5px;
 }
 
 /* Header*/
