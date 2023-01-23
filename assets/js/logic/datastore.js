@@ -78,8 +78,8 @@ export class DataStore {
             if (category.income) {
                 total += this.getCategoryTotal(key, frequency);
             }
-            return total;
         }
+        return total;
     }
 
     getTotalExpenses(frequency='weekly') {
@@ -89,8 +89,8 @@ export class DataStore {
             if (!category.income) {
                 total += this.getCategoryTotal(key, frequency);
             }
-            return total;
         }
+        return total;
     }
 
     getDisposableIncome(frequency='weekly') {
