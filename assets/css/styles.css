@@ -183,7 +183,7 @@ money-input::part(field-delete){
 }
 
 #total-section, #api-section {
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: bold;
     margin: 50px 0;
     width: 100%;
@@ -252,6 +252,95 @@ money-input::part(field-delete){
     font-size: 2rem;
     font-weight: bold;
 }
+
+
+
+
+
+
+
+
+
+/* Style inputs, select elements */
+.container input[type=text], .container select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+.container label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+/* Style the container */
+.container {
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #ffd7cd;
+    padding: 20px;
+}
+
+/* Floating column for labels: 25% width */
+.col-30 {
+    float: left;
+    width: 30%;
+    margin: 5px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+    /* float: left; */
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.row {
+    width: 100%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-30, .col-75 {
+      width: 100%;
+      margin-top: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

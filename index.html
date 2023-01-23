@@ -54,7 +54,7 @@
     </section>
 
     <!-- Total section  -->
-    <section id="total-section">
+    <!-- <section id="total-section">
         <h2>Your Total Amount</h2>
         <div class="total-container">
             <p>Calculated Budget</p>
@@ -71,6 +71,36 @@
                 <input type="text" id="total-expenses" value="0.00" readonly>
                 <label for="">Disposable Income</label>
                 <input type="text" id="total-disposable" value="0.00" readonly>
+            </div>
+        </div>
+    </section> -->
+    <section id="total-section">
+        <h2>Your Total Amount</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-75">
+                    <label for="country">Calculated Budget</label>
+                    <select name="frequency" id="total-frequency">
+                        <option value="weekly">Weekly</option>
+                        <option value="monthly">Monthly</option>
+                        <option value="quarterly">Quarterly</option>
+                        <option value="yearly">Yearly</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-30">
+                    <label for="fname">Total Income</label>
+                    <input type="text" id="total-income" value="0.00" readonly>
+                </div>
+                <div class="col-30">
+                    <label for="fname">Total Expenses</label>
+                    <input type="text" id="total-expenses" value="0.00" readonly>
+                </div>
+                <div class="col-30">
+                    <label for="fname">Total Disposable</label>
+                    <input type="text" id="total-disposable" value="0.00" readonly>
+                </div>
             </div>
         </div>
     </section>
