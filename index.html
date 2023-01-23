@@ -54,9 +54,9 @@
     </section>
 
     <!-- Total section  -->
-    <section id="button-section">
+    <section id="total-section">
         <h2>Your Total Amount</h2>
-        <div class="button-container">
+        <div class="total-container">
             <p>Calculated Budget</p>
             <select name="frequency" id="total-frequency">
                 <option value="weekly">Weekly</option>
@@ -64,7 +64,7 @@
                 <option value="quarterly">Quarterly</option>
                 <option value="yearly">Yearly</option>
             </select>
-            <div class="test-container">
+            <div class="total-input-container">
                 <label for="">Total Income</label>
                 <input type="text" id="total-income" value="0.00" readonly>
                 <label for="">Total Expenses</label>
@@ -72,6 +72,30 @@
                 <label for="">Disposable Income</label>
                 <input type="text" id="total-disposable" value="0.00" readonly>
             </div>
+        </div>
+    </section>
+
+    <!-- API section  -->
+    <section id="api-section">
+        <h2>Convert Currency</h2>
+        <div class="api-container">
+            <div class="api-input-container">
+                <label for="">Amount</label>
+                <input type="text" id="api-amount" value="0.00" readonly>
+            </div>
+            <p>From</p>
+            <select name="currency-from" id="currency-from">
+                <option value="usd">USD</option>
+                <option value="gbp">GBP</option>
+                <option value="quarterly">AUS</option>
+            </select>
+            <p>To</p>
+            <select name="currency-to" id="currency-to">
+                <option value="usd">USD</option>
+                <option value="gbp">GBP</option>
+                <option value="quarterly">AUS</option>
+            </select>
+            <button id="btn-convert">Convert</button>
         </div>
     </section>
 
