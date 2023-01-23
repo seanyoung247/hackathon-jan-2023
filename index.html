@@ -91,8 +91,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-75">
-                    <label for="total-income">Amount</label>
-                    <input type="text" id="total-income" value="0.00" readonly>
+                    <label for="from-currency-value">Amount</label>
+                    <input type="number" id="from-currency-value" value="0.00" step="0.01">
                 </div>
             </div>
             <div class="row">
@@ -101,9 +101,7 @@
                     <select name="currency-from" id="currency-from">
                         <option value="gbp">GBP</option>
                         <option value="eur">EUR</option>
-                        <option value="gbp">GBP</option>
                         <option value="usd">USD</option>
-                        <option value="can">CAN</option>
                     </select>
                 </div>
             </div>
@@ -113,27 +111,19 @@
                     <select name="currency-to" id="currency-to">
                         <option value="gbp">GBP</option>
                         <option value="eur">EUR</option>
-                        <option value="gbp">GBP</option>
                         <option value="usd">USD</option>
-                        <option value="can">CAN</option>
                     </select>
                 </div>
             </div>
             <div class="row">
                 <div class="col-75">
-                    <label for="total-income">Returns</label>
-                    <input type="text" id="total-income" value="0.00" readonly>
+                    <label for="to-currency-value">Returns</label>
+                    <input type="number" id="to-currency-value" value="0.00" readonly>
                 </div>
             </div>
             <div class="row">
                 <div class="col-75">
                     <button id="btn-convert">Convert</button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-75">
-                    <label for="total-income">Returns</label>
-                    <input type="text" id="total-income" value="0.00" readonly>
                 </div>
             </div>
         </div>

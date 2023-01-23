@@ -24,7 +24,7 @@ export function convertCurrency(from, to, value) {
         getExchangeRate(from, to)
             .then(data => {
                 const exr = data.exchange_rate;
-                resolve(value / exr);
+                resolve(value * exr);
             })
             .catch(reject)
     });

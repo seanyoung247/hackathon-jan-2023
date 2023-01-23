@@ -3,8 +3,6 @@ import { DataStore } from "./logic/datastore.js";
 
 (() => {
 
-    convertCurrency('USD', 'EUR', 500).then(data => console.log(data));
-
     const modal = document.getElementById('input-modal');
     const modalTitle = document.getElementById('modal-title');
     const moneyInputs = document.getElementById('money-inputs');
@@ -105,6 +103,18 @@ import { DataStore } from "./logic/datastore.js";
         const fieldId = dataStore.getFieldId(modal.dataset.category);
         input.key = `${modal.dataset.category}_${fieldId}`;
         moneyInputs.appendChild(input);
+    });
+
+    document.getElementById('btn-convert').addEventListener('click', e => {
+        const fromCurrency = document.getElementById('currency-from').value;
+        const toCurrency = document.getElementById('currency-to').value;
+        const fromValue = parseFloat(document.getElementById('from-currency-value').value);
+        const toValueEl = document.getElementById('to-currency-value');
+        toValueEl.value = 0.00;
+        if (fromValue) {
+            convertCurrency(fromCurrency, toCurrency, fromValue)
+                .then(data => toValueEl.value = data.toFixed(2));
+        }
     });
 
 })();
