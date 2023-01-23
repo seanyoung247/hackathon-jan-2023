@@ -2,12 +2,14 @@
 
 
 # MunnyPig SavingsApp
+
+<img src="assets/images/readme-images/Responsive.png">
+
 ​
 ## Team Name: Once Upon A Dime
 ​
 [Link to Deployed Project](https://seanyoung247.github.io/hackathon-jan-2023/)
 
-Gitpod reminder: Use "python3 -m http.server" to preview in server()
 ​
 ## Contents(#contents)
 ​
@@ -172,9 +174,14 @@ The following steps were taken to deploy this site:
 ## Testing
 The following tests were performed on the app
 * W3C HTML validation
+
+<img src="assets/images/readme-images/html-check.png">
+
+
 * Lighthouse Test
 
 <img src="assets/images/readme-images/Lighthouse-report.png">
+
 
 * Manual testing of the Modal Category Calculation
 
@@ -218,4 +225,4 @@ What an incredible team, credits go to: and in no particular order:
 * Rhys created the intial wireframes which gave the team something visual to aim for, and then played a big part in styling the landing page.
 * Russ took on the role of Scrum Master, GitHub and Gitpod manager and worked on intial HTML and added to landing page CSS.
 * Marcus worked on a canva design to bring some color and the design to life.
-* A massive shout out to Sean who lead the Javascript and WebComponent Section and created the modal functionality, which is the core piece of the app.
+* A **massive** shout out to Sean who lead the Javascript and WebComponent Section and created the modal functionality, which is the core piece of the app.
