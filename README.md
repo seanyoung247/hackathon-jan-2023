@@ -1,12 +1,13 @@
-# hackathon-jan-2023
-use python3 -m http.server to preview in server
+# Hackathon-Jan-2023
+
 
 # MunnyPig SavingsApp
 ​
-## Team Name: <<team_name>>
+## Team Name: Once Upon A Dime
 ​
-[Link to Deployed Project]
-https://seanyoung247.github.io/hackathon-jan-2023/
+[Link to Deployed Project](https://seanyoung247.github.io/hackathon-jan-2023/)
+
+Gitpod reminder: Use "python3 -m http.server" to preview in server()
 ​
 ## Contents(#contents)
 ​
@@ -70,8 +71,11 @@ We also considered our skill level and were sure we could deliver a minimum viab
 ​
 << how does you final product/project match up to your initial mvp plans >>
 ​
-<< detail idea / features / functionality here >>
-
+### Features included
+The MVP was very close to the planned idea
+* We created an attractive landing page
+* We focussed on 4 input icons - Income, Home, Transport and Fun
+* The Modals allowed correct input of data and totaled up the category
 
 
 
@@ -92,9 +96,9 @@ Inside the modals we introduced a navy blue font, and buttons to contrast agains
 Roboto font was chosen for Google Fonts for a clear, modern and easy to read font
 ​
 ### Imagery:
-Draft hero image and MoneyPig logo created on Canva - https://www.canva.com/
+Draft hero image and MoneyPig logo created on [Canva](https://www.canva.com/)
 
-<img src="assets/images/readme-images/hero-design-idea.png">;
+<img src="assets/images/readme-images/hero-design-idea.png">
 ​
 
 ### Wireframes:
@@ -110,16 +114,25 @@ Planned functionality
  * Delete button to delete the fields
  * Add button to add another income / expense line
  * Total amount (sums up all the income / expense lines)
+ * API with intereest rates and inflation rate to link to disposable income - to show affect of savings over time
 ​
+
+
 
 Mobile Wireframes:
 
-<img src="assets/images/readme-images/readme-wire-frame-mobile.jpg">
+
+<img src="assets/images/readme-images/mobile-home-final.png">
 ​
+
 
 Desktop Wireframes:
 ​​
 <img src="assets/images/readme-images/desktop-home-wireframe.png">
+
+<img src="assets/images/readme-images/desktop-home3.png">
+
+<img src="assets/images/readme-images/desktop-modal.png">
 
 ## Deployment
 The following steps were taken to deploy this site:
@@ -134,19 +147,36 @@ The following steps were taken to deploy this site:
 8. Link to live site: https://seanyoung247.github.io/hackathon-jan-2023/
 ​
 ## Testing
-<< detail testing logs here - any known bugs, and squashed bugs 🐛🐛 >>
+The following tests were performed on the app
+* W3C HTML validation
+* W3C CSS Validation
+* Lighthouse Test
+* Manual testing of the Modal Category Calculation
+
+### Bugs known
+
+
+### Bugs squashed
+* There was a bug that prevented a calculation of the correct amount between week, month and year.  This was resolved by changing the formula
+
+### Improvements needed
+* Modal: Make it easier to see additional income and expense lines (make the section a bit bigger)
+* Modal: Change “Add category” button text to simply “Add”
+* Modal: Have another “Add” button next to X button
+* Modal: Change the "Back" button to "Close" and put a X button in the top right corner of the modal box
+* Modal: Change “Cost” label in income modal to "Amount"
+
 ​
 ## Credits
 ​
 ### Code
-<< any and all code that isn't yours...must go here >>
+Code used for API from [API NINJA](https://api-ninjas.com/)
 ​
 ### Content
 All content used is unique to this project
 ​
 ### Media
-Images and logo and background was created on Canva - royalty free use
-https://www.canva.com/help/licenses-copyright-legal-commercial-use/
+Images and logo and background was created on [Canva](https://www.canva.com/) - royalty free use.
 ​
 ### Acknowledgements
 What an incredible team, credits go to: and in no particular order:
